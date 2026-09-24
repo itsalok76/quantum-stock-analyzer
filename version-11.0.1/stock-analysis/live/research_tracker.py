@@ -1,7 +1,7 @@
 """
 research_tracker.py
 
-v10.0.1 — Actual vs Predicted Research Tracker.
+v11.0.1 — Actual vs Predicted Research Tracker.
 
 Accumulates, within a single trading session, pairs of:
     (timestamp, actual_close, predicted_close, signal, exp_return, confidence)
@@ -18,7 +18,7 @@ This gives the "prediction lags live data by 30 min" display the caller
 wants: the prediction line is plotted 30 minutes *before* the bar it
 targets, while the actual line reflects the close as it happens.
 
-Version : 10.0.1
+Version : 11.0.1
 """
 
 from __future__ import annotations

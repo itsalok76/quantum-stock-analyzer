@@ -20,7 +20,7 @@ to produce a complete trading-assistant signal:
 All quantum computation remains inside QAMOEngineV2.  This class only
 assembles the outputs — no quantum logic here.
 
-Version : 10.0.1
+Version : 11.0.1
 """
 
 from __future__ import annotations

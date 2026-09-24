@@ -28,7 +28,7 @@ FetchResult.cause values
   "unsupported_symbol" — even 30m data is poor (likely index/ETF)
   "degraded"           — data is usable but below HIGH threshold
 
-Version : 10.0.1
+Version : 11.0.1
 """
 
 from __future__ import annotations

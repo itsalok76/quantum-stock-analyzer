@@ -2,7 +2,7 @@
 """
 Quantum Stock Probability Analyzer
 
-Version : 10.0.1
+Version : 11.0.1
 """
 
 from __future__ import annotations

@@ -36,7 +36,7 @@ A score ≥ 90 is considered HIGH quality.
 A score 70–89 is MEDIUM — predictions are less reliable.
 A score < 70 is LOW — fallback to coarser interval recommended.
 
-Version : 10.0.1
+Version : 11.0.1
 """
 
 from __future__ import annotations

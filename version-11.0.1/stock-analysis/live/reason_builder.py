@@ -10,7 +10,7 @@ recommendation.
 Rules are evaluated in priority order.  The last item is always a risk caveat
 when risk is Medium or High.
 
-Version : 10.0.1
+Version : 11.0.1
 """
 
 from __future__ import annotations

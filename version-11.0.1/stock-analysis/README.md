@@ -8,9 +8,9 @@ QPIP is a premium portfolio intelligence application for NSE investors. The quan
 
 ## What's New in v11.0.1
 
-Complete redesign from QAMO v10.0.1. Same quantum engine, entirely new intelligence and UI layer.
+Complete redesign from the prior QAMO release. Same quantum engine, entirely new intelligence and UI layer.
 
-| Feature | v10.0.1 | v11.0.1 |
+| Feature | v11.0.1 | v11.0.1 |
 |---|---|---|
 | Branding | QAMO — Quantum Market Observer | **QPIP — Quantum Portfolio Intelligence** |
 | Home screen | Track selector | **Quantum Decision Center** |
@@ -91,7 +91,7 @@ dashboard/                      ← UI pages
 ├── page_strategy.py
 └── page_doctor.py
 
-live/                           ← Quantum engine (reused from v10.0.1)
+live/                           ← Quantum engine (reused in v11.0.1)
 ├── qamo_engine_v2.py           ← Core adaptive quantum pipeline
 ├── intraday_assistant.py       ← Per-symbol orchestrator
 ├── feed_with_fallback.py       ← Auto-fallback data quality
@@ -120,9 +120,9 @@ Users see plain language. Behind each metric is a real computation:
 
 ## Research Pages
 
-All v10.0.1 / v6.2.0 research pages are preserved under **⚙ Research & Settings**:
+All v11.0.1 / v6.2.0 research pages are preserved under **⚙ Research & Settings**:
 QAMO v2 Adaptive, QAMO v1 Fixed, Model Comparison, Trajectory Experiment, Research Tracker, Classical vs Quantum, and the full Portfolio Analysis suite (Fidelity, Entanglement, QFT, QPE, VQC Optimizer).
 
 ---
 
-*QPIP v11.0.1 · Built on QAMO v10.0.1 quantum engine · IBM watsonx AI · Qiskit Aer*
+*QPIP v11.0.1 · Built on QAMO v11.0.1 quantum engine · IBM watsonx AI · Qiskit Aer*

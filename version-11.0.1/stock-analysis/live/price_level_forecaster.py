@@ -19,7 +19,7 @@ Formulas
 All levels are clipped to price +/- MAX_DEVIATION_PCT % to prevent
 runaway predictions when exp_return is extreme.
 
-Version : 10.0.1
+Version : 11.0.1
 """
 
 from __future__ import annotations

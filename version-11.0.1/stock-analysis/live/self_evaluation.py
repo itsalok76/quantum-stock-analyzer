@@ -10,7 +10,7 @@ Every evening:
     4. Produce a retraining report
     5. Update encoder normalisation constants for next session
 
-Version : 10.0.1
+Version : 11.0.1
 """
 
 from __future__ import annotations

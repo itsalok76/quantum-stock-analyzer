@@ -17,7 +17,7 @@ in the buffer.
 Inputs come entirely from the TickBuffer already populated by QAMOEngineV2.
 No additional data fetching is required.
 
-Version : 10.0.1
+Version : 11.0.1
 """
 
 from __future__ import annotations

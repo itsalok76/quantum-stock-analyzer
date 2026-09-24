@@ -1,4 +1,4 @@
-# QAMO v10.0.1 — Developer Reference
+# QAMO v11.0.1 — Developer Reference
 
 Complete technical reference for contributors and developers building on QAMO.
 
@@ -15,7 +15,7 @@ Complete technical reference for contributors and developers building on QAMO.
    - [Classical Pipeline Modules](#classical-pipeline-modules)
    - [Quantum Portfolio Modules](#quantum-portfolio-modules)
    - [Live / Intraday Modules](#live--intraday-modules)
-   - [New Modules — v10.0.1](#new-modules--v1001)
+   - [New Modules — v11.0.1](#new-modules--v1101)
    - [Dashboard Modules](#dashboard-modules)
 6. [Data Flow — Portfolio Classical + Quantum Pipeline](#data-flow--portfolio-classical--quantum-pipeline)
 7. [Data Flow — QAMO v2 Intraday Pipeline](#data-flow--qamo-v2-intraday-pipeline)
@@ -23,7 +23,7 @@ Complete technical reference for contributors and developers building on QAMO.
 9. [Data Contracts](#data-contracts)
 10. [Caching Strategy](#caching-strategy)
 11. [Quantum Encoding Reference](#quantum-encoding-reference)
-12. [Bug Fixes Applied in v10.0.1](#bug-fixes-applied-in-v1001)
+12. [Bug Fixes Applied in v11.0.1](#bug-fixes-applied-in-v1101)
 13. [Testing](#testing)
 14. [Adding a New Dashboard Page](#adding-a-new-dashboard-page)
 15. [Adding a New Live Feed Adapter](#adding-a-new-live-feed-adapter)
@@ -116,9 +116,9 @@ stock-analysis/
 │   ├── state_comparator.py          Per-bar state comparison table
 │   ├── experiment_runner.py         Static + Adaptive experiment runner
 │   ├── walk_forward.py              Date-range walk-forward aggregator
-│   ├── research_tracker.py          ResearchTracker — actual vs predicted (FIXED v10)
+│   ├── research_tracker.py          ResearchTracker — actual vs predicted (FIXED v11)
 │   │
-│   ├── ── NEW in v10.0.1 ──────────────────────────────────────
+│   ├── ── NEW in v11.0.1 ──────────────────────────────────────
 │   ├── price_level_forecaster.py    PriceLevelForecaster — exp OHLC from ATR + exp_return
 │   ├── trend_classifier.py          TrendClassifier — Bullish/Bearish/Sideways + strength
 │   ├── support_resistance.py        SupportResistance — pivot-point S/R levels
@@ -142,7 +142,7 @@ stock-analysis/
 │   ├── page_optimizer.py            Portfolio Optimizer (VQC)
 │   ├── page_report.py               Export Report
 │   │
-│   ├── ── NEW in v10.0.1 ──────────────────────────────────────
+│   ├── ── NEW in v11.0.1 ──────────────────────────────────────
 │   ├── page_intraday_assistant.py   🎯 Track 1 — Intraday Assistant
 │   └── page_comparison.py           📊 Classical vs Quantum Comparison
 │
@@ -229,10 +229,10 @@ from config import (
 )
 ```
 
-### New in v10.0.1
+### New in v11.0.1
 
 ```python
-APP_VERSION        = "10.0.1"
+APP_VERSION        = "11.0.1"
 
 STRONG_BUY_P_UP    = 0.65   # P(Up) threshold for STRONG BUY
 BUY_P_UP           = 0.55   # P(Up) threshold for BUY
@@ -357,18 +357,18 @@ C(t) = 0.4·H_norm + 0.4·rank_norm + 0.2·decorr
 Key attributes after refresh: `buf`, `latest_fv`, `latest_state`,
 `latest_prediction`, `latest_score`, `latest_traj`.
 
-#### `live/research_tracker.py` — `ResearchTracker` (FIXED v10)
+#### `live/research_tracker.py` — `ResearchTracker` (FIXED v11)
 `record_prediction(...)`, `record_actual(...)`.
 Timestamps normalised via `_normalise_ts()` — eliminates timezone mismatch bugs.
 `accuracy() -> float`, `mean_error_pct() -> float`.
 
-#### `live/self_evaluation.py` — `SelfEvaluation` (FIXED v10)
+#### `live/self_evaluation.py` — `SelfEvaluation` (FIXED v11)
 `evaluate() -> dict` — nightly error report.
 `apply_recommendations(engine) -> list[str]` — NEW: acts on `retrain_flag`.
 
 ---
 
-### New Modules — v10.0.1
+### New Modules — v11.0.1
 
 #### `live/price_level_forecaster.py` — `PriceLevelForecaster(fv, signal)`
 
@@ -615,10 +615,10 @@ before `|⟨ψ1|ψ2⟩|²` — implemented in `live/adaptive_memory._fidelity()`
 
 ---
 
-## Bug Fixes Applied in v10.0.1
+## Bug Fixes Applied in v11.0.1
 
 ### Fix 1 — Version string centralised
-`config.py`: `APP_VERSION = "10.0.1"`. Referenced from `app.py` and `main.py`.
+`config.py`: `APP_VERSION = "11.0.1"`. Referenced from `app.py` and `main.py`.
 No more hardcoded scattered version strings.
 
 ### Fix 2 — ResearchRecord dead code removed
@@ -650,7 +650,7 @@ pytest test_report.py
 pytest test_visualization.py
 ```
 
-### Smoke tests for new v10.0.1 modules
+### Smoke tests for new v11.0.1 modules
 
 ```python
 # PriceLevelForecaster
@@ -753,7 +753,7 @@ Single source of truth:
 
 ```python
 # config.py
-APP_VERSION = "10.0.1"
+APP_VERSION = "11.0.1"
 ```
 
 Referenced everywhere else:
